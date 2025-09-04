@@ -1,0 +1,303 @@
+/* ================================
+   Giỏ hàng – Cart CSS
+================================*/
+
+/* -------------------------------
+   Layout chung
+--------------------------------*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-main {
+  flex: 1;
+}
+
+/* ================================
+   Header
+================================*/
+.cart-header {
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
+}
+
+.cart-header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cart-header__logo h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.cart-header__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.cart-header__nav a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.cart-header__nav a:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .cart-header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* ================================
+   Tiêu đề
+================================*/
+.cart-title {
+  font-size: 2.4rem;
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   Bảng giỏ hàng
+================================*/
+.cart-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cart-table {
+  display: inline-table;
+  width: 100%;
+  min-width: 700px; /* tránh co quá nhỏ */
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.cart-item__image {
+  width: 60px;
+  height: auto;
+}
+
+.cart-item__qty-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background: var(--secondary-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cart-item__qty-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.cart-item__remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--main-text-color);
+  transition: color 0.3s ease;
+}
+
+.cart-item__remove:hover {
+  color: var(--accent-color);
+}
+
+/* ================================
+   Tổng cộng / Summary
+================================*/
+.cart-summary {
+  font-size: 1.6rem;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   Nút hành động (Actions)
+================================*/
+.cart-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-actions__btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cart-actions__btn--primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.cart-actions__btn--primary:hover {
+  background-color: #34495e;
+}
+
+.cart-actions__btn--accent {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.cart-actions__btn--accent:hover {
+  background-color: #c0392b;
+}
+
+/* ================================
+   Khuyến mãi / Discount
+================================*/
+.cart-discount__input {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  width: 200px;
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+
+.cart-discount__btn {
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+.cart-discount__btn--accent {
+  background-color: var(--accent-color);
+}
+
+.cart-discount__btn--accent:hover {
+  background-color: #c0392b;
+}
+
+/* ================================
+   Footer
+================================*/
+.cart-footer {
+  background: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ================================
+   Accordion (Hệ thống cửa hàng)
+================================*/
+.cart-store-accordion__toggle {
+  display: none; /* ẩn checkbox */
+}
+
+.cart-store-accordion__label {
+  display: block;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 0.2rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cart-store-accordion__toggle:checked + .cart-store-accordion__label {
+  border-color: #999;       /* viền tối khi mở */
+  background-color: #e0e0e0; /* nền tối hơn khi mở */
+}
+
+.cart-store-accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0 1rem;
+  transition: max-height 0.3s ease;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 6px 6px;
+}
+
+.cart-store-accordion__toggle:checked + .cart-store-accordion__label + .cart-store-accordion__content {
+  max-height: 500px; /* đủ để chứa nội dung */
+}
+
+.cart-store-accordion__content p,
+.cart-store-accordion__content ul {
+  margin: 0.5rem 0;
+}
+
+.cart-store-accordion__social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.cart-store-accordion__social-links a {
+  text-decoration: underline;
+  color: #007bff;
+  font-weight: normal;
+}
+
+.cart-store-accordion__social-links a:hover {
+  color: #0056b3;
+}
+/*  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2"
+                  >
+                    <path d="M10 11v6" />
+                    <path d="M14 11v6" />
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                    <path d="M3 6h18" />
+                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  </svg> */
