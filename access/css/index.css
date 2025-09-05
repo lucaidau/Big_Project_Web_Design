@@ -37,3 +37,55 @@
 .navbar__link:hover {
   color: var(--color-accent);
 }
+
+.banner {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 5%;
+}
+
+.banner__text {
+  max-width: 50%;
+}
+
+.banner__tilte {
+  font-size: 4.6rem;
+}
+
+.banner__subtitle {
+  font-size: 1.8rem;
+}
+
+.banner__img {
+  max-height: 40rem;
+  max-width: 100%;
+  border-radius: 0.8rem;
+}
+
+.categories {
+  padding: 4rem 5%;
+}
+
+.categories_list {
+  display: flex;
+  gap: 2rem;
+}
+
+.category {
+  flex: 1;
+  background-color: #faf7f2;
+  color: var(--color-black);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.category:hover {
+  transform: scale(1.1);
+  background-color: var(--color-secondary);
+}
