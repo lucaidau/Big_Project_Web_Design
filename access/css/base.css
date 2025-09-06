@@ -146,6 +146,11 @@ p {
   font-weight: bold;
   transition: 0.4s ease;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 .primary {
