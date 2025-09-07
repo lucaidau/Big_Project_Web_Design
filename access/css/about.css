@@ -1,35 +1,23 @@
-header {
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border: 1px solid #ddd;
+  background-color: var(--color-secondary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
-  background-color: #efe6d3;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  position: relative;
-  z-index: 1000; /* Đảm bảo header luôn ở trên nếu có hiệu ứng khác */
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  padding: 1.5rem 3rem;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #8b7355;
+.navbar__toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 .auth {
@@ -41,7 +29,7 @@ nav a:hover {
 .auth a {
   color: #1a1a1a;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -57,7 +45,7 @@ nav a:hover {
 
 h1,
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -71,7 +59,7 @@ h2 {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   background-color: #f8f6f2;
   color: #1a1a1a;
   line-height: 1.6;
@@ -125,7 +113,7 @@ body {
   padding-top: 2rem;
   border-top: 1px solid #e0dcc8;
   margin-top: 4rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
   letter-spacing: 0.5px;
 }
@@ -232,6 +220,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
+    z-index: 10;
+    transition: border 0.2s ease-in-out;
+  }
+
   .section h1 {
     font-size: 2.2rem;
   }
