@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="access/css/base.css" />
+    <link rel="stylesheet" href="access/css/index.css" />
     <link rel="stylesheet" href="access/css/about.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -14,20 +19,42 @@
     />
   </head>
   <body>
-    <header>
-      <div>Fashion Store</div>
-      <nav>
-        <ul>
-          <li><a href="#">Trang Chủ</a></li>
-          <li><a href="#">Sản Phẩm</a></li>
-          <li><a href="#" style="color: #8b7355">Giới Thiệu</a></li>
-          <li><a href="#">Liên Hệ</a></li>
+    <header class="navbar">
+      <nav class="navbar__container">
+        <a href="index.html" class="navbar__logo">Fashion Store</a>
+
+        <div class="navbar__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__link">Trang Chủ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__link">Giới Thiệu</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="product.html" class="navbar__link">Sản Phẩm</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="contact.html" class="navbar__link">Liên Hệ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="login.html" class="navbar__link">Đăng Nhập</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="cart.html" class="navbar__link navbar__link--cart"
+              >🛒 Giỏ Hàng</a
+            >
+          </li>
         </ul>
       </nav>
-      <div class="auth">
-        <a href="#">Đăng Nhập</a>
-        <a href="#" class="cart">🛒</a>
-      </div>
     </header>
     <main>
       <section class="section">
@@ -100,5 +127,13 @@
       </div>
       <p>&copy; 2024 Bản quyền thuộc về Fashion Store</p>
     </footer>
+    <script>
+      const toggle = document.querySelector(".navbar__toggle");
+      const menu = document.querySelector(".navbar__menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

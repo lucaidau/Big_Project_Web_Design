@@ -6,6 +6,14 @@
     <title>Fashion Store</title>
     <link rel="stylesheet" href="access/css/base.css" />
     <link rel="stylesheet" href="access/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome CDN -->
     <link
@@ -17,6 +25,11 @@
     <header class="navbar">
       <nav class="navbar__container">
         <a href="index.html" class="navbar__logo">Fashion Store</a>
+
+        <div class="navbar__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
         <ul class="navbar__menu">
           <li class="navbar__item">
             <a href="index.html" class="navbar__link">Trang Chủ</a>
@@ -44,9 +57,6 @@
             >
           </li>
         </ul>
-        <div class="navbar_menu">
-          <i class="fa-solid fa-bars"></i>
-        </div>
       </nav>
     </header>
     <main>
@@ -152,5 +162,14 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      const toggle = document.querySelector(".navbar__toggle");
+      const menu = document.querySelector(".navbar__menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
