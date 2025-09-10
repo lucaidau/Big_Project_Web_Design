@@ -5,15 +5,6 @@
 /* -------------------------------
    Layout chung
 --------------------------------*/
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
 
 .cart-main {
   flex: 1;
@@ -246,7 +237,9 @@ body {
   color: var(--color-black);
 }
 
-.cart-store-accordion__toggle:checked + .cart-store-accordion__label + .cart-store-accordion__content {
+.cart-store-accordion__toggle:checked
+  + .cart-store-accordion__label
+  + .cart-store-accordion__content {
   max-height: 500px;
   border-color: #999;
   background-color: #e0e0e0;

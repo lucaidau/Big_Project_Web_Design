@@ -6,6 +6,13 @@
     <title>Giỏ hàng</title>
     <link rel="stylesheet" href="access/css/base.css" />
     <link rel="stylesheet" href="access/css/cart.css" />
+    <link rel="stylesheet" href="access/css/index.css" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -16,20 +23,43 @@
          .cart-header__logo       : logo
          .cart-header__nav        : menu điều hướng
     =========================== -->
-    <header id="header"></header>
-    <div class="container cart-header__row">
-      <div class="cart-header__logo">
-        <h2>Fashion Store</h2>
-      </div>
-      <nav class="cart-header__nav text-right">
-        <a href="index.html">Trang chủ</a>
-        <a href="product.html">Sản phẩm</a>
-        <a href="about.html">Giới thiệu</a>
-        <a href="contact.html">Liên hệ</a>
-        <a href="login.html">Đăng nhập</a>
-        <a href="cart.html">Giỏ hàng</a>
+    <header class="navbar">
+      <nav class="navbar__container">
+        <a href="index.html" class="navbar__logo">Fashion Store</a>
+
+        <div class="navbar__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__link">Trang Chủ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__link">Giới Thiệu</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="product.html" class="navbar__link">Sản Phẩm</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="contact.html" class="navbar__link">Liên Hệ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="login.html" class="navbar__link">Đăng Nhập</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="cart.html" class="navbar__link navbar__link--cart"
+              >🛒 Giỏ Hàng</a
+            >
+          </li>
+        </ul>
       </nav>
-    </div>
+    </header>
     <!-- ==========================
          MAIN CONTENT
          .cart-main                : container chính của trang giỏ hàng
@@ -244,8 +274,73 @@
 
     <!-- FOOTER -->
     <!-- .cart-footer              : footer của trang giỏ hàng -->
-    <footer class="cart-footer text-center mt-4 mb-4">
-      <p>© 2025 Fashion Store. All rights reserved.</p>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__social">
+          <span class="footer__social--text">Kết nối với chúng tôi</span>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer__content">
+        <div class="footer__column footer__company">
+          <h3 class="footter__title">Company name</h3>
+          <p class="footer__text">
+            Thời trang bền vững, thiết kế tinh tế. Lấy cảm hứng từ vẻ đẹp tự
+            nhiên và sự tối giản.
+          </p>
+        </div>
+
+        <div class="footer__column footer__product">
+          <h3 class="footter__title">Products</h3>
+          <ul class="footer__list">
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Thời Trang Nam</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Thời Trang Nữ</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Giày</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Phụ kiện</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__column footer__contact">
+          <h3 class="footter__title">Contact</h3>
+          <ul class="footer__list">
+            <li class="footer__items">Tp. Hồ Chí Minh, Việt Nam</li>
+            <li class="footer__items">info@fashionstore.vn</li>
+            <li class="footer__items">+84 123 456 789</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__coppyright">
+          © 2025 FASHION STORE | DESIGN BY GROUP 4
+        </p>
+      </div>
     </footer>
+    <script>
+      const toggle = document.querySelector(".navbar__toggle");
+      const menu = document.querySelector(".navbar__menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
