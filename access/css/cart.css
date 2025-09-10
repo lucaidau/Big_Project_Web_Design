@@ -23,7 +23,7 @@ body {
    Header
 ================================*/
 .cart-header {
-  background-color: var(--secondary-color);
+  background-color: var(--color-secondary);
   padding: 1rem 0;
 }
 
@@ -38,7 +38,7 @@ body {
   font-family: var(--font-heading);
   font-weight: 500;
   font-size: 2.8rem;
-  color: var(--primary-color);
+  color: var(--color-primary);
   letter-spacing: 1px;
   margin: 0;
 }
@@ -50,13 +50,13 @@ body {
 
 .cart-header__nav a {
   text-decoration: none;
-  color: var(--main-text-color);
+  color: var(--color-black);
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .cart-header__nav a:hover {
-  color: var(--accent-color);
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {
@@ -74,6 +74,7 @@ body {
   font-size: 2.4rem;
   font-family: var(--font-heading);
   margin-bottom: 1rem;
+  color: var(--color-black);
 }
 
 /* ================================
@@ -89,16 +90,17 @@ body {
   width: 100%;
   min-width: 700px; /* tránh co quá nhỏ */
   border-collapse: collapse;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .cart-table th,
 .cart-table td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-gray-light);
   padding: 1rem;
   text-align: center;
+  color: var(--color-black);
 }
 
 .cart-item__image {
@@ -111,27 +113,27 @@ body {
   border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  border: 1px solid #ccc;
-  background: var(--secondary-color);
+  border: 1px solid var(--color-gray-light);
+  background: var(--color-secondary);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cart-item__qty-btn:hover {
-  background: var(--accent-color);
-  color: #fff;
+  background: var(--color-accent);
+  color: var(--color-white);
 }
 
 .cart-item__remove {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--main-text-color);
+  color: var(--color-black);
   transition: color 0.3s ease;
 }
 
 .cart-item__remove:hover {
-  color: var(--accent-color);
+  color: var(--color-accent);
 }
 
 /* ================================
@@ -141,6 +143,7 @@ body {
   font-size: 1.6rem;
   text-align: right;
   margin-bottom: 1rem;
+  color: var(--color-black);
 }
 
 /* ================================
@@ -165,17 +168,17 @@ body {
 }
 
 .cart-actions__btn--primary {
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .cart-actions__btn--primary:hover {
-  background-color: #34495e;
+  background-color: var(--color-accent);
 }
 
 .cart-actions__btn--accent {
-  background-color: var(--accent-color);
-  color: #fff;
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .cart-actions__btn--accent:hover {
@@ -190,7 +193,7 @@ body {
   font-size: 1.4rem;
   width: 200px;
   margin-right: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-gray-light);
   border-radius: 0.4rem;
 }
 
@@ -201,11 +204,11 @@ body {
   font-weight: bold;
   cursor: pointer;
   border: none;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .cart-discount__btn--accent {
-  background-color: var(--accent-color);
+  background-color: var(--color-accent);
 }
 
 .cart-discount__btn--accent:hover {
@@ -216,9 +219,10 @@ body {
    Footer
 ================================*/
 .cart-footer {
-  background: var(--secondary-color);
+  background: var(--color-secondary);
   padding: 1rem;
   text-align: center;
+  color: var(--color-black);
 }
 
 /* ================================
@@ -230,36 +234,35 @@ body {
 
 .cart-store-accordion__label {
   display: block;
-  background-color: var(--secondary-color);
+  background-color: var(--color-secondary);
   padding: 1rem;
   cursor: pointer;
   font-weight: bold;
   font-size: 1.6rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-gray-light);
   border-radius: 6px;
   margin-bottom: 0.2rem;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  color: var(--color-black);
 }
 
-.cart-store-accordion__toggle:checked + .cart-store-accordion__label {
-  border-color: #999;       /* viền tối khi mở */
-  background-color: #e0e0e0; /* nền tối hơn khi mở */
+.cart-store-accordion__toggle:checked + .cart-store-accordion__label + .cart-store-accordion__content {
+  max-height: 500px;
+  border-color: #999;
+  background-color: #e0e0e0;
 }
 
 .cart-store-accordion__content {
   max-height: 0;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 0 1rem;
   transition: max-height 0.3s ease;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-left: 1px solid var(--color-gray-light);
+  border-right: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-gray-light);
   border-radius: 0 0 6px 6px;
-}
-
-.cart-store-accordion__toggle:checked + .cart-store-accordion__label + .cart-store-accordion__content {
-  max-height: 500px; /* đủ để chứa nội dung */
+  color: var(--color-black);
 }
 
 .cart-store-accordion__content p,
@@ -276,28 +279,10 @@ body {
 
 .cart-store-accordion__social-links a {
   text-decoration: underline;
-  color: #007bff;
+  color: var(--color-accent);
   font-weight: normal;
 }
 
 .cart-store-accordion__social-links a:hover {
-  color: #0056b3;
+  color: #c0392b;
 }
-/*  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-trash-2"
-                  >
-                    <path d="M10 11v6" />
-                    <path d="M14 11v6" />
-                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
-                    <path d="M3 6h18" />
-                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                  </svg> */
