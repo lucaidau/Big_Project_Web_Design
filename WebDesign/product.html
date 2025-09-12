@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Sản Phẩm - Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Font chữ mặc định tương tự mẫu */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f6f3; /* Màu nền chính */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    background-color: #e8dcd1; /* Màu nền header */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d3c7b8; /* Đường viền mỏng */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer; /* Cho thấy đây là một phần tử có thể tương tác */
+}
+
+nav ul {
+    display: flex;
+    align-items: center; /* Căn giữa các mục menu theo chiều dọc */
+}
+
+nav ul li {
+    margin-left: 25px;
+    font-size: 14px; /* Kích thước chữ menu */
+}
+
+nav ul li a {
+    font-weight: 500; /* Độ đậm vừa phải */
+    color: #555; /* Màu chữ menu */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a58b7e; /* Màu menu khi hover, màu nâu nhạt */
+}
+
+nav ul li a i { /* Style cho icon giỏ hàng */
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-banner.jpg') no-repeat center center/cover; /* Thay 'images/hero-banner.jpg' bằng ảnh banner của bạn */
+    height: 70vh; /* Chiều cao 70% viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333; /* Màu chữ ban đầu */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay { /* Lớp phủ màu nhẹ để chữ dễ đọc */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(232, 224, 217, 0.7); /* Màu nền kem nhạt */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative; /* Đưa nội dung lên trên lớp phủ */
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 54px; /* Kích thước tiêu đề lớn */
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: #333;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d3c7b8; /* Màu nút giống mẫu */
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #d3c7b8; /* Viền nút */
+}
+
+.btn:hover {
+    background-color: transparent; /* Nền trong suốt khi hover */
+    color: #a58b7e; /* Chữ màu nâu nhạt khi hover */
+    border-color: #a58b7e; /* Viền màu nâu nhạt khi hover */
+}
+
+/* Main Content - Products Page */
+.products-main {
+    padding: 40px 0;
+}
+
+.products-main .container {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa sidebar và sản phẩm */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; /* Độ rộng cố định cho sidebar */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    height: fit-content; /* Chiều cao tự động theo nội dung */
+}
+
+.sidebar h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    font-size: 15px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #a58b7e;
+}
+
+/* Filter Price */
+.filter-price p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.price-slider {
+    margin-top: 15px;
+}
+
+.slider {
+    width: 100%;
+    height: 6px; /* Độ dày thanh trượt */
+    background: #d3c7b8; /* Màu nền thanh trượt */
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+/* Style cho thumb (nút kéo) của range input */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Kích thước nút kéo */
+    height: 20px;
+    background: #a58b7e; /* Màu nút kéo */
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff; /* Viền trắng cho nút kéo */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #a58b7e;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.price-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #777;
+    margin-top: 8px;
+}
+
+
+/* Products Section */
+.products-section {
+    flex: 1; /* Cho phép phần sản phẩm chiếm phần còn lại */
+}
+
+.products-section h2 { /* Tiêu đề "Sản phẩm" lớn ở đầu trang */
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: left; /* Căn trái */
+    padding-left: 15px; /* Thêm padding trái cho khớp với ảnh */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 30px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: 300px; /* Chiều cao ảnh sản phẩm cố định */
+    object-fit: cover; /* Đảm bảo ảnh hiển thị đẹp, không bị méo */
+    display: block;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.product-item .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #a58b7e; /* Màu giá */
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) { /* Tablet và nhỏ hơn */
+    .products-main .container {
+        flex-direction: column; /* Stack sidebar và sản phẩm */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar full width */
+        margin-bottom: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột sản phẩm */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    header .container {
+        flex-direction: column;
+        align-items: flex-start; /* Căn trái logo và menu */
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Cho phép menu xuống dòng */
+        justify-content: flex-start; /* Căn trái menu */
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .products-section h2 {
+        font-size: 30px;
+        text-align: center; /* Căn giữa tiêu đề sản phẩm */
+        padding-left: 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 cột sản phẩm */
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+    .sidebar h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 10px 20px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Fashion Store</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Sản Phẩm</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="#">Đăng Nhập</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Giỏ Hàng</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bộ Sưu Tập Xuân - Hè 2025</h1>
+                <p>Phong cách trẻ trung, hiện đại và tinh tế</p>
+                <a href="#products" class="btn">Khám Phá Ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="products-main">
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Sản phẩm</h2>
+                <div class="categories">
+                    <h3>Danh mục</h3>
+                    <ul>
+                        <li><a href="#">Thời Trang Nam</a></li>
+                        <li><a href="#">Thời Trang Nữ</a></li>
+                        <li><a href="#">Giày</a></li>
+                        <li><a href="#">Phụ Kiện</a></li>
+                    </ul>
+                </div>
+                <div class="filter-price">
+                    <h3>Lọc theo</h3>
+                    <p>Giá</p>
+                    <div class="price-slider">
+                        <input type="range" min="200000" max="1500000" value="800000" class="slider">
+                        <div class="price-range-labels">
+                            <span>200.000₫</span>
+                            <span>1.500.000₫</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="images/product1.jpg" alt="Áo sơ mi nam">
+                        <h3>Áo sơ mi nam</h3>
+                        <p class="price">499.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product2.jpg" alt="Áo khoác nữ">
+                        <h3>Áo khoác nữ</h3>
+                        <p class="price">1.099.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product3.jpg" alt="Túi xách">
+                        <h3>Túi xách</h3>
+                        <p class="price">499.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product4.jpg" alt="Giày thể thao">
+                        <h3>Giày thể thao</h3>
+                        <p class="price">750.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product5.jpg" alt="Quần tây nữ">
+                        <h3>Quần tây nữ</h3>
+                        <p class="price">650.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product6.jpg" alt="Váy công sở">
+                        <h3>Váy công sở</h3>
+                        <p class="price">850.000₫</p>
+                    </div>
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fashion Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
