@@ -3,39 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên Hệ</title>
-    <link rel="stylesheet" href="access/css/base.css" />
-    <link rel="stylesheet" href="access/css/contact.css" />
-  </head>
-  <body>
-  <header id="header"></header>
-  <main>
-    <section class="contact-section">
-      <h1>Liên hệ</h1>
-      <div class="contact-container">
-          <!-- Form liên hệ -->
+       <title>Liên hệ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdfdfd;
+            padding: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .contact-form {
+            flex: 1;
+            max-width: 50%;
+        }
+
+            .contact-form h1 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .contact-form button {
+                padding: 12px 25px;
+                background: #a37b5f;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 15px;
+            }
+
+        .contact-info {
+            flex: 1;
+            padding-left: 50px;
+        }
+
+            .contact-info h2 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+
+            .contact-info p {
+                margin: 8px 0;
+                font-size: 15px;
+            }
+
+            .contact-info i {
+                margin-right: 8px;
+                color: #a37b5f;
+            }
+    </style>
+    <!-- FontAwesome cho icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Form liên hệ -->
         <div class="contact-form">
-          <form action="#" method="post">
-            <input type="text" placeholder="Họ và tên" required />
-            <input type="email" placeholder="Địa chỉ email" required />
-            <textarea placeholder="Tin nhắn" rows="5" required></textarea>
-            <button type="submit">Gửi đi</button>
-          </form>
+            <h1>Liên hệ</h1>
+            <form>
+                <input type="text" placeholder="Họ và tên" required>
+                <input type="email" placeholder="Địa chỉ email" required>
+                <textarea rows="5" placeholder="Tin nhắn" required></textarea>
+                <button type="submit">Gửi đi</button>
+            </form>
         </div>
 
         <!-- Thông tin liên hệ -->
         <div class="contact-info">
-          <h2>Thông tin liên hệ</h2>
-          <p>📞 876.403.258622</p>
-          <p>📧 maxsmith@siteemail.com</p>
-          <p>📍 Kt, Lục gian, Biên Hòa</p>
+            <h2>Thông tin liên hệ</h2>
+            <p><i class="fas fa-phone"></i> 876.40.328862</p>
+            <p><i class="fas fa-envelope"></i> mtaimin@exatemak.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Kẹ lụo, gain, t:EH</p>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer"></footer>
-  <script src="/js/include.js"></script>
+    </div>
 </body>
 
 </html>
