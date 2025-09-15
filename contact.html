@@ -3,36 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên Hệ</title>
-    <link rel="stylesheet" href="access/css/base.css" />
-    <link rel="stylesheet" href="access/css/contact.css" />
-  </head>
-  <body>
-  <header id="header"></header>
-  <main>
-    <section class="contact-section">
-      <h1>Liên hệ</h1>
-      <div class="contact-container">
-          <!-- Form liên hệ -->
-        <div class="contact-form">
-          <form action="#" method="post">
-            <input type="text" placeholder="Họ và tên" required />
-            <input type="email" placeholder="Địa chỉ email" required />
-            <textarea placeholder="Tin nhắn" rows="5" required></textarea>
-            <button type="submit">Gửi đi</button>
-          </form>
-        </div>
+    <title>Liên hệ - Fashion Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f1eb;
+      color: #333;
+    }
 
-        <!-- Thông tin liên hệ -->
-        <div class="contact-info">
-          <h2>Thông tin liên hệ</h2>
-          <p>📞 876.403.258622</p>
-          <p>📧 maxsmith@siteemail.com</p>
-          <p>📍 Kt, Lục gian, Biên Hòa</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: #f5f1eb;
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 50px;
+    }
+
+    .contact-form {
+      flex: 1;
+      margin-right: 50px;
+    }
+
+    .contact-form h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background-color: #b0855d;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .contact-form button:hover {
+      opacity: 0.9;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-info h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #b0855d;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Fashion Store</h1>
+    <nav>
+      <a href="#">Trang Chủ</a>
+      <a href="#">Sản Phẩm</a>
+      <a href="#">Giới Thiệu</a>
+      <a href="#">Liên Hệ</a>
+      <a href="#">Đăng Nhập</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Liên hệ</h2>
+      <form>
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="email" placeholder="Địa chỉ email" required>
+        <textarea placeholder="Tin nhắn" required></textarea>
+        <button type="submit">Gửi đi</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h3>Thông tin liên hệ</h3>
+      <p><i class="fas fa-phone"></i> 876.40.328862</p>
+      <p><i class="fas fa-envelope"></i> mtaomin@exaemak.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> KE tuọ.gain.1:EH</p>
+    </div>
+  </section>
 
   <footer id="footer"></footer>
   <script src="/js/include.js"></script>
