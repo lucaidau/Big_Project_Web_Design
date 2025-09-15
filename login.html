@@ -1,46 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng Nhập</title>
-    <link rel="stylesheet" href="access/css/base.css" />
-    <link rel="stylesheet" href="access/css/login.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <nav class="navbar__container">
-        <a href="index.html" class="navbar__logo">Fashion Store</a>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="index.html" class="navbar__link">Trang Chủ</a>
-          </li>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f1eb;
+      color: #333;
+    }
 
-          <li class="navbar__item">
-            <a href="about.html" class="navbar__link">Giới Thiệu</a>
-          </li>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #f5f1eb;
+    }
+    .logo {
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    nav a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #b0855d;
+    }
+    .cart-icon {
+      font-size: 22px;
+      cursor: pointer;
+    }
 
-          <li class="navbar__item">
-            <a href="product.html" class="navbar__link">Sản Phẩm</a>
-          </li>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 60px;
+    }
+    .left, .right {
+      width: 48%;
+    }
 
-          <li class="navbar__item">
-            <a href="contact.html" class="navbar__link">Liên Hệ</a>
-          </li>
+    h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    .form-group {
+      margin-bottom: 22px;
+    }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background: #fff;
+      font-size: 15px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+    input[type="email"]:focus, input[type="password"]:focus {
+      border: 1px solid #b0855d;
+      outline: none;
+      box-shadow: 0 0 6px rgba(176, 133, 93, 0.3);
+    }
+    label {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: -10px;
+      color: #555;
+    }
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background: #b0855d;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #946947;
+      transform: translateY(-2px);
+    }
+    .note {
+      margin-top: 18px;
+      font-size: 14px;
+    }
+    .note a {
+      color: #b0855d;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .note a:hover {
+      text-decoration: underline;
+    }
 
-          <li class="navbar__item">
-            <a href="login.html" class="navbar__link">Đăng Nhập</a>
-          </li>
+    .cart-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    .cart-box h3 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .cart-item img {
+      width: 55px;
+      height: 55px;
+      border-radius: 8px;
+margin-right: 12px;
+    }
+    .cart-item .name {
+      flex: 1;
+      font-weight: 500;
+    }
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    .checkout {
+      width: 100%;
+      padding: 14px;
+      background: #b0855d;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .checkout:hover {
+      background: #946947;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Fashion Store</div>
+    <nav>
+      <a href="#">Trang Chủ</a>
+      <a href="#">Sản Phẩm</a>
+      <a href="#">Giới Thiệu</a>
+      <a href="#">Liên Hệ</a>
+      <a href="#">Đăng Nhập</a>
+    </nav>
+    <div class="cart-icon">🛒</div>
+  </header>
 
-          <li class="navbar__item">
-            <a href="cart.html" class="navbar__link navbar__link--cart"
-              >🛒 Giỏ Hàng</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
-    <footer></footer>
-  </body>
+  <div class="container">
+    <div class="left">
+      <h2>Đăng nhập</h2>
+      <form>
+        <div class="form-group">
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Mật khẩu">
+        </div>
+        <label><input type="checkbox"> Nhớ mật khẩu</label>
+        <div class="form-group">
+          <button type="submit" class="btn">Đăng nhập</button>
+        </div>
+        <div class="note">Bạn chưa có tài khoản? <a href="#">Đăng ký</a></div>
+      </form>
+    </div>
+
+    <div class="right">
+      <div class="cart-box">
+        <h3>Giỏ hàng</h3>
+        <div class="cart-item">
+          <div style="display:flex;align-items:center;">
+            <img src="/img/aosominam.jpg" alt="sản phẩm">
+            
+            <div class="name">Áo sơ mi mam</div>
+          </div>
+          <div>499,000 đ</div>
+        </div>
+        <div class="cart-total">
+          <div>Tổng</div>
+          <div>499,000 đ</div>
+        </div>
+        <button class="checkout">Thanh toán</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
