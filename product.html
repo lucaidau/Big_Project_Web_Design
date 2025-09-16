@@ -7,40 +7,109 @@
     <link rel="stylesheet" href="access/css/base.css" />
     <link rel="stylesheet" href="access/css/product.css" />
   </head>
-  <body>
-    <header class="navbar">
-      <nav class="navbar__container">
-        <a href="index.html" class="navbar__logo">Fashion Store</a>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="index.html" class="navbar__link">Trang Chủ</a>
-          </li>
+  
+ <body>
 
-          <li class="navbar__item">
-            <a href="about.html" class="navbar__link">Giới Thiệu</a>
-          </li>
-
-          <li class="navbar__item">
-            <a href="product.html" class="navbar__link">Sản Phẩm</a>
-          </li>
-
-          <li class="navbar__item">
-            <a href="contact.html" class="navbar__link">Liên Hệ</a>
-          </li>
-
-          <li class="navbar__item">
-            <a href="login.html" class="navbar__link">Đăng Nhập</a>
-          </li>
-
-          <li class="navbar__item">
-            <a href="cart.html" class="navbar__link navbar__link--cart"
-              >🛒 Giỏ Hàng</a
-            >
-          </li>
-        </ul>
-      </nav>
+    <header>
+        <div class="container">
+            <div class="logo">Fashion Store</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Sản Phẩm</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="#">Đăng Nhập</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Giỏ Hàng</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main></main>
-    <footer></footer>
-  </body>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bộ Sưu Tập Xuân - Hè 2025</h1>
+                <p>Phong cách trẻ trung, hiện đại và tinh tế</p>
+                <a href="#products" class="btn">Khám Phá Ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="products-main">
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Sản phẩm</h2>
+                <div class="categories">
+                    <h3>Danh mục</h3>
+                    <ul>
+                        <li><a href="#">Thời Trang Nam</a></li>
+                        <li><a href="#">Thời Trang Nữ</a></li>
+                        <li><a href="#">Giày</a></li>
+                        <li><a href="#">Phụ Kiện</a></li>
+                    </ul>
+                </div>
+                <div class="filter-price">
+                    <h3>Lọc theo</h3>
+                    <p>Giá</p>
+                    <div class="price-slider">
+                        <input type="range" min="200000" max="1500000" value="800000" class="slider">
+                        <div class="price-range-labels">
+                            <span>200.000₫</span>
+                            <span>1.500.000₫</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="images/product1.jpg" alt="Áo sơ mi nam">
+                        <h3>Áo sơ mi nam</h3>
+                        <p class="price">499.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product2.jpg" alt="Áo khoác nữ">
+                        <h3>Áo khoác nữ</h3>
+                        <p class="price">1.099.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product3.jpg" alt="Túi xách">
+                        <h3>Túi xách</h3>
+                        <p class="price">499.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product4.jpg" alt="Giày thể thao">
+                        <h3>Giày thể thao</h3>
+                        <p class="price">750.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product5.jpg" alt="Quần tây nữ">
+                        <h3>Quần tây nữ</h3>
+                        <p class="price">650.000₫</p>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="images/product6.jpg" alt="Váy công sở">
+                        <h3>Váy công sở</h3>
+                        <p class="price">850.000₫</p>
+                    </div>
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fashion Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
