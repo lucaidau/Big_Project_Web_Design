@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="access/css/base.css" />
+    <link rel="stylesheet" href="access/css/cart.css" />
+    <link rel="stylesheet" href="access/css/index.css" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ==========================
+         HEADER
+         .cart-header             : toàn bộ header giỏ hàng
+         .cart-header__row        : chứa logo và menu
+         .cart-header__logo       : logo
+         .cart-header__nav        : menu điều hướng
+    =========================== -->
+    <header class="navbar">
+      <nav class="navbar__container">
+        <a href="index.html" class="navbar__logo">Fashion Store</a>
+
+        <div class="navbar__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__link">Trang Chủ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__link">Giới Thiệu</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="product.html" class="navbar__link">Sản Phẩm</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="contact.html" class="navbar__link">Liên Hệ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="login.html" class="navbar__link">Đăng Nhập</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="cart.html" class="navbar__link navbar__link--cart"
+              >🛒 Giỏ Hàng</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ==========================
+         MAIN CONTENT
+         .cart-main                : container chính của trang giỏ hàng
+    =========================== -->
+    <main class="cart-main container mt-4 mb-4">
+      <!-- Tiêu đề -->
+      <!-- .cart-title              : tiêu đề chính "Giỏ hàng" -->
+      <h1 class="cart-title mb-3">Giỏ hàng</h1>
+
+      <!-- Bảng giỏ hàng -->
+      <!-- .cart-table-wrapper      : khung chứa bảng, có scroll ngang nếu cần -->
+      <!-- .cart-table              : bảng hiển thị sản phẩm -->
+      <!-- .cart-item               : mỗi hàng sản phẩm -->
+      <!-- .cart-item__image        : ảnh sản phẩm -->
+      <!-- .cart-item__qty-btn      : nút +/- số lượng -->
+      <!-- .cart-item__qty          : hiển thị số lượng -->
+      <!-- .cart-item__remove       : nút xóa sản phẩm -->
+      <div class="cart-table-wrapper">
+        <table class="cart-table mb-4">
+          <thead>
+            <tr>
+              <th>Sản phẩm</th>
+              <th>Ảnh</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Thành tiền</th>
+              <th>Xóa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cart-item">
+              <td>Áo sơ mi nam</td>
+              <td>
+                <img
+                  src="./access/img/ao-so-mi.jpg"
+                  alt="Áo sơ mi"
+                  class="cart-item__image"
+                />
+              </td>
+              <td>499,000 đ</td>
+              <td>
+                <button class="cart-item__qty-btn">-</button>
+                <span class="cart-item__qty">1</span>
+                <button class="cart-item__qty-btn">+</button>
+              </td>
+              <td>499,000 đ</td>
+              <td>
+                <button class="cart-item__remove">
+                  <!-- SVG icon thùng rác -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2"
+                  >
+                    <path d="M10 11v6" />
+                    <path d="M14 11v6" />
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                    <path d="M3 6h18" />
+                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+            <tr class="cart-item">
+              <td>Quần tây nam</td>
+              <td>
+                <img
+                  src="access/img/quan-tay.jpg"
+                  alt="Quần tây"
+                  class="cart-item__image"
+                />
+              </td>
+              <td>699,000 đ</td>
+              <td>
+                <button class="cart-item__qty-btn">-</button>
+                <span class="cart-item__qty">2</span>
+                <button class="cart-item__qty-btn">+</button>
+              </td>
+              <td>1,398,000 đ</td>
+              <td>
+                <button class="cart-item__remove">
+                  <!-- SVG icon thùng rác -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2"
+                  >
+                    <path d="M10 11v6" />
+                    <path d="M14 11v6" />
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                    <path d="M3 6h18" />
+                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tổng cộng -->
+      <!-- .cart-summary            : hiển thị tạm tính, giảm giá, tổng thanh toán -->
+      <div class="cart-summary mb-4 text-right">
+        <p>Tạm tính: <strong>1,897,000 đ</strong></p>
+        <p>Giảm giá: <strong>0 đ</strong></p>
+        <p><b>Tổng thanh toán: 1,897,000 đ</b></p>
+      </div>
+
+      <!-- Nút hành động -->
+      <!-- .cart-actions            : container các nút hành động -->
+      <!-- .cart-actions__btn        : nút chung -->
+      <!-- .cart-actions__btn--primary : nút thanh toán -->
+      <!-- .cart-actions__btn--accent  : nút tiếp tục mua sắm -->
+      <div class="cart-actions text-center mb-4">
+        <a
+          href="product.html"
+          class="cart-actions__btn cart-actions__btn--accent"
+          >Tiếp tục mua sắm</a
+        >
+        <a href="#" class="cart-actions__btn cart-actions__btn--primary"
+          >Thanh toán</a
+        >
+      </div>
+
+      <!-- Khuyến mãi -->
+      <!-- .cart-discount           : container nhập mã giảm giá -->
+      <!-- .cart-discount__input     : input nhập mã -->
+      <!-- .cart-discount__btn       : nút áp dụng -->
+      <!-- .cart-discount__btn--accent : nút áp dụng màu accent -->
+      <div class="cart-discount mb-4">
+        <label for="discount">Khuyến mãi / Mã giảm giá</label><br />
+        <input
+          type="text"
+          id="discount"
+          class="cart-discount__input"
+          placeholder="Nhập mã"
+        />
+        <button class="cart-discount__btn cart-discount__btn--accent">
+          Áp dụng
+        </button>
+      </div>
+
+      <!-- HỆ THỐNG CỬA HÀNG (Accordion) -->
+      <!-- .cart-store-locations          : section chứa danh sách cửa hàng -->
+      <!-- .cart-store-accordion__item     : mỗi cửa hàng 1 item -->
+      <!-- .cart-store-accordion__toggle   : checkbox ẩn điều khiển mở/đóng -->
+      <!-- .cart-store-accordion__label    : nhãn cửa hàng có mũi tên -->
+      <!-- .cart-store-accordion__content  : nội dung chi tiết cửa hàng -->
+      <!-- .cart-store-accordion__social-links : danh sách social links -->
+      <section class="cart-store-locations mb-4">
+        <h2>Hệ thống cửa hàng Fashion Store</h2>
+
+        <!-- Store 1 -->
+        <div class="cart-store-accordion__item">
+          <input
+            type="checkbox"
+            id="store1"
+            class="cart-store-accordion__toggle"
+          />
+          <label for="store1" class="cart-store-accordion__label">
+            Store 1: 26 Lý Tự Trọng, HCM ▼
+          </label>
+          <div class="cart-store-accordion__content">
+            <p>Email: store1@fashionstore.com</p>
+            <p>Hotline: 1900 1234</p>
+            <p>Follow us on social media:</p>
+            <ul class="cart-store-accordion__social-links">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Store 2 -->
+        <div class="cart-store-accordion__item">
+          <input
+            type="checkbox"
+            id="store2"
+            class="cart-store-accordion__toggle"
+          />
+          <label for="store2" class="cart-store-accordion__label">
+            Store 2: 140 Nguyễn Hy Quang, Hà Nội ▼
+          </label>
+          <div class="cart-store-accordion__content">
+            <p>Email: store2@fashionstore.com</p>
+            <p>Hotline: 1900 5678</p>
+            <p>Follow us on social media:</p>
+            <ul class="cart-store-accordion__social-links">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- .cart-footer              : footer của trang giỏ hàng -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__social">
+          <span class="footer__social--text">Kết nối với chúng tôi</span>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer__content">
+        <div class="footer__column footer__company">
+          <h3 class="footter__title">Company name</h3>
+          <p class="footer__text">
+            Thời trang bền vững, thiết kế tinh tế. Lấy cảm hứng từ vẻ đẹp tự
+            nhiên và sự tối giản.
+          </p>
+        </div>
+
+        <div class="footer__column footer__product">
+          <h3 class="footter__title">Products</h3>
+          <ul class="footer__list">
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Thời Trang Nam</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Thời Trang Nữ</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Giày</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Phụ kiện</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__column footer__contact">
+          <h3 class="footter__title">Contact</h3>
+          <ul class="footer__list">
+            <li class="footer__items">Tp. Hồ Chí Minh, Việt Nam</li>
+            <li class="footer__items">info@fashionstore.vn</li>
+            <li class="footer__items">+84 123 456 789</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__coppyright">
+          © 2025 FASHION STORE | DESIGN BY GROUP 4
+        </p>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.querySelector(".navbar__toggle");
+      const menu = document.querySelector(".navbar__menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="access/css/base.css" />
+    <link rel="stylesheet" href="access/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="navbar__container">
+        <a href="index.html" class="navbar__logo">Fashion Store</a>
+
+        <div class="navbar__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__link">Trang Chủ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__link">Giới Thiệu</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="product.html" class="navbar__link">Sản Phẩm</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="contact.html" class="navbar__link">Liên Hệ</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="login.html" class="navbar__link">Đăng Nhập</a>
+          </li>
+
+          <li class="navbar__item">
+            <a href="cart.html" class="navbar__link navbar__link--cart"
+              >🛒 Giỏ Hàng</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- banner -->
+      <section class="banner">
+        <div>
+          <img
+            class="banner__img"
+            src="./access/img/model.png"
+            alt="model img"
+          />
+        </div>
+        <div class="banner__text">
+          <h1 class="banner__tilte mb-2">Bộ Sưu Tập Xuân - Hè 2025</h1>
+          <p class="banner__subtitle mb-4">
+            Phong cách trẻ trung, hiện đại và tinh tế
+          </p>
+          <a href="product.html" class="banner__btn btn primary"
+            >Khám Phá Ngay</a
+          >
+        </div>
+      </section>
+
+      <section class="categories">
+        <h1 class="categories_title">Danh Mục nổi bật</h1>
+        <div class="categories_list">
+          <a href="product.html" class="category">
+            <i class="fa-solid fa-shirt"></i>
+            <p>Thời Trang Nam</p>
+          </a>
+          <a href="product.html" class="category">
+            <i class="fa-solid fa-person-dress"></i>
+            <p>Thời Trang Nữ</p>
+          </a>
+          <a href="product.html" class="category">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <p>Giày</p>
+          </a>
+          <a href="product.html" class="category">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p>Phụ Kiện</p>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__social">
+          <span class="footer__social--text">Kết nối với chúng tôi</span>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a class="footer__social--link" href="#"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer__content">
+        <div class="footer__column footer__company">
+          <h3 class="footter__title">Company name</h3>
+          <p class="footer__text">
+            Thời trang bền vững, thiết kế tinh tế. Lấy cảm hứng từ vẻ đẹp tự
+            nhiên và sự tối giản.
+          </p>
+        </div>
+
+        <div class="footer__column footer__product">
+          <h3 class="footter__title">Products</h3>
+          <ul class="footer__list">
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Thời Trang Nam</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Thời Trang Nữ</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Giày</a>
+            </li>
+            <li class="footer__items">
+              <a class="footer__items" href="product.html">Phụ kiện</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__column footer__contact">
+          <h3 class="footter__title">Contact</h3>
+          <ul class="footer__list">
+            <li class="footer__items">Tp. Hồ Chí Minh, Việt Nam</li>
+            <li class="footer__items">info@fashionstore.vn</li>
+            <li class="footer__items">+84 123 456 789</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__coppyright">
+          © 2025 FASHION STORE | DESIGN BY GROUP 4
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector(".navbar__toggle");
+      const menu = document.querySelector(".navbar__menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

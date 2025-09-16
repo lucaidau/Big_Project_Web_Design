@@ -1,0 +1,281 @@
+/* ================================
+   Giỏ hàng – Cart CSS
+================================*/
+
+/* -------------------------------
+   Layout chung
+--------------------------------*/
+
+.cart-main {
+  flex: 1;
+}
+
+/* ================================
+   Header
+================================*/
+.cart-header {
+  background-color: var(--color-secondary);
+  padding: 1rem 0;
+}
+
+.cart-header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cart-header__logo h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.cart-header__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.cart-header__nav a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.cart-header__nav a:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .cart-header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* ================================
+   Tiêu đề
+================================*/
+.cart-title {
+  font-size: 2.4rem;
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+/* ================================
+   Bảng giỏ hàng
+================================*/
+.cart-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cart-table {
+  display: inline-table;
+  width: 100%;
+  min-width: 700px; /* tránh co quá nhỏ */
+  border-collapse: collapse;
+  background: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid var(--color-gray-light);
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.cart-item__image {
+  width: 60px;
+  height: auto;
+}
+
+.cart-item__qty-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid var(--color-gray-light);
+  background: var(--color-secondary);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cart-item__qty-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.cart-item__remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-black);
+  transition: color 0.3s ease;
+}
+
+.cart-item__remove:hover {
+  color: var(--color-accent);
+}
+
+/* ================================
+   Tổng cộng / Summary
+================================*/
+.cart-summary {
+  font-size: 1.6rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+/* ================================
+   Nút hành động (Actions)
+================================*/
+.cart-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-actions__btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cart-actions__btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.cart-actions__btn--primary:hover {
+  background-color: var(--color-accent);
+}
+
+.cart-actions__btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.cart-actions__btn--accent:hover {
+  background-color: #c0392b;
+}
+
+/* ================================
+   Khuyến mãi / Discount
+================================*/
+.cart-discount__input {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  width: 200px;
+  margin-right: 1rem;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 0.4rem;
+}
+
+.cart-discount__btn {
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  color: var(--color-white);
+}
+
+.cart-discount__btn--accent {
+  background-color: var(--color-accent);
+}
+
+.cart-discount__btn--accent:hover {
+  background-color: #c0392b;
+}
+
+/* ================================
+   Footer
+================================*/
+.cart-footer {
+  background: var(--color-secondary);
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-black);
+}
+
+/* ================================
+   Accordion (Hệ thống cửa hàng)
+================================*/
+.cart-store-accordion__toggle {
+  display: none; /* ẩn checkbox */
+}
+
+.cart-store-accordion__label {
+  display: block;
+  background-color: var(--color-secondary);
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border: 1px solid var(--color-gray-light);
+  border-radius: 6px;
+  margin-bottom: 0.2rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  color: var(--color-black);
+}
+
+.cart-store-accordion__toggle:checked
+  + .cart-store-accordion__label
+  + .cart-store-accordion__content {
+  max-height: 500px;
+  border-color: #999;
+  background-color: #e0e0e0;
+}
+
+.cart-store-accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--color-white);
+  padding: 0 1rem;
+  transition: max-height 0.3s ease;
+  border-left: 1px solid var(--color-gray-light);
+  border-right: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-gray-light);
+  border-radius: 0 0 6px 6px;
+  color: var(--color-black);
+}
+
+.cart-store-accordion__content p,
+.cart-store-accordion__content ul {
+  margin: 0.5rem 0;
+}
+
+.cart-store-accordion__social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.cart-store-accordion__social-links a {
+  text-decoration: underline;
+  color: var(--color-accent);
+  font-weight: normal;
+}
+
+.cart-store-accordion__social-links a:hover {
+  color: #c0392b;
+}
