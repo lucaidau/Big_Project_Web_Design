@@ -13,42 +13,6 @@
 /* ================================
    Header
 ================================*/
-.cart-header {
-  background-color: var(--color-secondary);
-  padding: 1rem 0;
-}
-
-.cart-header__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.cart-header__logo h2 {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 2.8rem;
-  color: var(--color-primary);
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.cart-header__nav {
-  display: flex;
-  gap: 2rem;
-}
-
-.cart-header__nav a {
-  text-decoration: none;
-  color: var(--color-black);
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.cart-header__nav a:hover {
-  color: var(--color-accent);
-}
 
 @media (max-width: 768px) {
   .cart-header__nav {
@@ -206,21 +170,13 @@
   background-color: #c0392b;
 }
 
-/* ================================
-   Footer
-================================*/
-.cart-footer {
-  background: var(--color-secondary);
-  padding: 1rem;
-  text-align: center;
-  color: var(--color-black);
-}
 
 /* ================================
    Accordion (Hệ thống cửa hàng)
 ================================*/
 .cart-store-accordion__toggle {
   display: none; /* ẩn checkbox */
+
 }
 
 .cart-store-accordion__label {
@@ -229,7 +185,7 @@
   padding: 1rem;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   border: 1px solid var(--color-gray-light);
   border-radius: 6px;
   margin-bottom: 0.2rem;
@@ -261,6 +217,7 @@
 .cart-store-accordion__content p,
 .cart-store-accordion__content ul {
   margin: 0.5rem 0;
+  font-size: 1.2rem;
 }
 
 .cart-store-accordion__social-links {
@@ -278,4 +235,7 @@
 
 .cart-store-accordion__social-links a:hover {
   color: #c0392b;
+}
+.cart-store-locations mb-4 h2{
+  color: var(--color-primary);
 }
