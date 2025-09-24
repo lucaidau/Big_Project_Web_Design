@@ -58,12 +58,34 @@
       </section>
 
       <div class="container">
-        <div class="img-section">
-          <img
-            src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="Cửa hàng thời trang"
-          />
-        </div>
+       <div class="img-section">
+  <div class="slideshow">
+    <div class="slide active"> 
+      <img src="access/img/woman-6466907_1280.jpg" alt="Fashion Model 1">
+    </div>
+    <div class="slide">
+      <img src="access/img/fashion-model-looks-at-camera.jpg" alt="Fashion Model 2">
+    </div>
+    <div class="slide">
+      <img src="access/img/woman-9230049_1280.jpg" alt="Fashion Model 3">
+    </div>
+    <div class="slide">
+      <img src="access/img/man-9182458_1280.jpg" alt="Fashion Model 4">
+    </div>
+    <div class="slide">
+      <img src="access/img/pexels-frendsmans-1926769.jpg" alt="Fashion Model 5">
+    </div>
+
+    <!-- Dots điều hướng -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</div>
 
         <div class="content-section">
           <h2>Điều gì làm cho thời trang chúng tôi trở nên đặc biệt</h2>
@@ -124,12 +146,57 @@
       <p>&copy; 2024 Bản quyền thuộc về Fashion Store</p>
     </footer>
     <script>
-      const toggle = document.querySelector(".navbar__toggle");
-      const menu = document.querySelector(".navbar__menu");
+      // Toggle menu mobile
+  const toggle = document.querySelector(".navbar__toggle");
+  const menu = document.querySelector(".navbar__menu");
 
-      toggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-      });
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  // ========= SLIDESHOW =========
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let currentSlide = 0;
+  let autoPlayInterval;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Bắt đầu tự động chuyển ảnh mỗi 4 giây
+  autoPlayInterval = setInterval(nextSlide, 4000);
+
+  // Cho phép click vào dots để chọn slide
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      clearInterval(autoPlayInterval); // Dừng auto khi click
+      currentSlide = index;
+      showSlide(currentSlide);
+      // Bắt đầu lại sau 5s
+      setTimeout(() => {
+        autoPlayInterval = setInterval(nextSlide, 4000);
+      }, 5000);
+    });
+  });
+
+  // Tạm dừng khi hover vào slideshow
+  const slideshow = document.querySelector('.slideshow');
+  slideshow.addEventListener('mouseenter', () => {
+    clearInterval(autoPlayInterval);
+  });
+  slideshow.addEventListener('mouseleave', () => {
+    autoPlayInterval = setInterval(nextSlide, 4000);
+  });
     </script>
   </body>
 </html>
