@@ -1,53 +1,33 @@
+:root {
+  --color-primary: #c89b7b; /* Nâu be sang trọng */
+  --color-primary-dark: #8c6a5d;
+
+  /* Secondary */
+  --color-secondary: #e5d1c1; /* Be nhạt */
+  --color-accent: #d97706; /* Cam đất */
+
+  /* Neutral */
+  --color-bg: #f9f7f5;
+  --color-white: #ffffff;
+  --color-black: #222222;
+  --color-gray-dark: #555555;
+  --color-gray-light: #cccccc;
+
+  --bs-primary: #c89b7b;
+  --bs-primary-rgb: 200, 155, 123;
+}
+
 body {
   font-family: "Playfair Display", sans-serif;
 }
 
 .navbar {
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 10;
   background-color: var(--color-secondary);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3rem;
-}
-
-.navbar__logo {
-  font-family: var();
-  font-size: 2.4rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--color-black);
-}
-
-.navbar__toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 2rem;
-}
-
-.navbar__menu {
-  list-style: none;
-  display: flex;
-  gap: 5rem;
-}
-
-.navbar__link {
-  text-decoration: none;
+.nav-link {
   color: var(--color-black);
   font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.navbar__link:hover {
-  color: var(--color-accent);
-  transform: scale(1.05);
 }
 
 .banner {
@@ -62,16 +42,17 @@ body {
 }
 
 .banner__img {
+  padding-top: 20rem;
   width: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
 .banner__text {
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 40%;
+  left: 5%;
   transform: translateY(-50%);
   max-width: 45%;
   padding: 0 5%;
@@ -245,6 +226,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: contain;
+    padding: 0;
   }
 
   .banner__text {

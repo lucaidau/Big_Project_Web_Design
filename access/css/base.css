@@ -155,8 +155,8 @@ p {
 }
 
 .primary {
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: var(--color-primary-dark);
+  color: #ddd;
 }
 
 .primary:hover {
