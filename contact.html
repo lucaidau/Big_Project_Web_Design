@@ -1,41 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên Hệ</title>
-    <link rel="stylesheet" href="access/css/base.css" />
-    <link rel="stylesheet" href="access/css/contact.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fashion Store - Liên hệ</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fbf6f1;
+        --card: #fffaf6;
+        --muted: #6b6b6b; /* màu chữ phụ / icon */
+        --text: #1b1b1b;
+        --accent: #b07e5a;
+        --container-w: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header {
+        max-width: var(--container-w);
+        margin: 28px auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      .wrap {
+        max-width: var(--container-w);
+        margin: 10px auto 80px;
+        padding: 34px;
+        background: var(--card);
+        border-radius: 6px;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        padding-top: 48px;
+      }
+
+      .left {
+        flex: 1 1 60%;
+        padding-left: 10px;
+      }
+      .page-title {
+        font-size: 44px;
+        margin: 0 0 18px 0;
+        font-weight: 700;
+      }
+
+      form {
+        max-width: 520px;
+      }
+      .field {
+        margin-bottom: 18px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        background: #fff;
+        font-size: 14px;
+      }
+      textarea {
+        min-height: 110px;
+      }
+
+      .btn {
+        padding: 12px 26px;
+        border-radius: 12px;
+        background: var(--accent);
+        color: white;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* right column */
+      .right {
+        width: 320px;
+        padding-left: 18px;
+      }
+      .info-title {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 18px;
+      }
+
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      /* --- ICONS WITHOUT BOX --- */
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* khoảng cách icon - text */
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      /* Không nền, không viền – chỉ icon stroke */
+      .icon {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent; /* KHÔNG có ô nền */
+        padding: 0;
+        color: var(--muted); /* stroke color via currentColor */
+        flex-shrink: 0;
+      }
+
+      /* SVG stroke-only, không fill */
+      .icon svg {
+        width: 16px;
+        height: 16px;
+        display: block;
+      }
+      .icon svg path,
+      .icon svg line,
+      .icon svg rect,
+      .icon svg circle {
+        stroke: currentColor;
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+      /* Một số icon có đường path phức tạp — đảm bảo không bị fill */
+      .icon svg [fill] {
+        fill: none !important;
+      }
+
+      .contact-item p {
+        margin: 0;
+        line-height: 1.15;
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+
+      @media (max-width: 880px) {
+        .wrap {
+          flex-direction: column;
+          padding: 28px;
+        }
+        .right {
+          width: 100%;
+          padding-left: 0;
+          margin-top: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
-  <header id="header"></header>
-  <main>
-    <section class="contact-section">
-      <h1>Liên hệ</h1>
-      <div class="contact-container">
-          <!-- Form liên hệ -->
-        <div class="contact-form">
-          <form action="#" method="post">
-            <input type="text" placeholder="Họ và tên" required />
-            <input type="email" placeholder="Địa chỉ email" required />
-            <textarea placeholder="Tin nhắn" rows="5" required></textarea>
-            <button type="submit">Gửi đi</button>
+    <header>
+      <div class="brand">Fashion Store</div>
+      <nav style="color: var(--muted); font-size: 14px">
+        <a
+          href="#"
+          style="margin-right: 16px; text-decoration: none; color: inherit"
+          >Trang Chủ</a
+        >
+        <a
+          href="#"
+          style="margin-right: 16px; text-decoration: none; color: inherit"
+          >Sản Phẩm</a
+        >
+        <a
+          href="#"
+          style="margin-right: 16px; text-decoration: none; color: inherit"
+          >Giới Thiệu</a
+        >
+        <a href="#" style="text-decoration: none; color: inherit">Liên Hệ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="wrap" role="main">
+        <div class="left">
+          <h1 class="page-title">Liên hệ</h1>
+          <form onsubmit="alert('Gửi liên hệ (demo)'); return false;">
+            <div class="field">
+              <input type="text" placeholder="Họ và tên" required />
+            </div>
+            <div class="field">
+              <input type="email" placeholder="Địa chỉ email" required />
+            </div>
+            <div class="field">
+              <textarea placeholder="Tin nhắn" required></textarea>
+            </div>
+            <button class="btn" type="submit">Gửi đi</button>
           </form>
         </div>
 
-        <!-- Thông tin liên hệ -->
-        <div class="contact-info">
-          <h2>Thông tin liên hệ</h2>
-          <p>📞 876.403.258622</p>
-          <p>📧 maxsmith@siteemail.com</p>
-          <p>📍 Kt, Lục gian, Biên Hòa</p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <aside class="right" aria-label="Thông tin liên hệ">
+          <div class="info-title">Thông tin liên hệ</div>
 
-  <footer id="footer"></footer>
-  <script src="/js/include.js"></script>
-</body>
+          <div class="contact-list">
+            <!-- phone -->
+            <div class="contact-item">
+              <div class="icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3.09 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72c.12.98.37 1.94.72 2.84a2 2 0 0 1-.45 2.11L9.91 10.09a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.9.35 1.86.6 2.84.72A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <p>876.40.328662</p>
+            </div>
 
+            <!-- email -->
+            <div class="contact-item">
+              <div class="icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M22 7l-10 7L2 7"></path>
+                </svg>
+              </div>
+              <p>mtamian@exaemak.com</p>
+            </div>
+
+            <!-- location -->
+            <div class="contact-item">
+              <div class="icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M21 10c0 6-9 11-9 11s-9-5-9-11a9 9 0 1 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="2"></circle>
+                </svg>
+              </div>
+              <p>KE uipo.gain. !:EH</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </body>
 </html>

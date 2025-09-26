@@ -1,115 +1,789 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sản Phẩm</title>
-    <link rel="stylesheet" href="access/css/base.css" />
+    <title>Products</title>
     <link rel="stylesheet" href="access/css/product.css" />
   </head>
-
- <body>
-
-    <header>
-        <div class="container">
-            <div class="logo">Fashion Store</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="product.html">Sản Phẩm</a></li>
-                    <li><a href="about.html">Giới Thiệu</a></li>
-                    <li><a href="contact.html">Liên Hệ</a></li>
-                    <li><a href="login.html">Đăng Nhập</a></li>
-                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Giỏ Hàng</a></li>
-                </ul>
-            </nav>
+  <body>
+    <header class="header">
+      <div class="top-bar">
+        <p>Free Shipping On Orders Over $50. Easy Returns.</p>
+      </div>
+      <div class="main-nav-container">
+        <div class="main-nav">
+          <div class="logo">
+            <a href="#">
+              <strong>FashionStore</strong>
+            </a>
+          </div>
+          <nav class="nav-links">
+            <ul>
+              <li><a href="#">SHOES</a></li>
+              <li><a href="#">NEW ARRIVALS</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-icons">
+            <ul class="list">
+              <li><a href="#">Our Stores</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">ReRun</a></li>
+            </ul>
+            <div class="icons">
+              <a href="#" title="Search"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-search"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg
+              ></a>
+              <a href="#" title="Account"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-user"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle></svg
+              ></a>
+              <a href="#" title="Help"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-help-circle"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12" y2="17"></line></svg
+              ></a>
+              <a href="#" title="View Cart"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-shopping-bag"
+                >
+                  <path
+                    d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                  ></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path></svg
+              ></a>
+            </div>
+          </nav>
         </div>
+      </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Bộ Sưu Tập Xuân - Hè 2025</h1>
-                <p>Phong cách trẻ trung, hiện đại và tinh tế</p>
-                <a href="#products" class="btn">Khám Phá Ngay</a>
+    <nav class="breadcrumb">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><span class="divider">/</span></li>
+        <li><a href="#">Shoes</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="product-header">
+        <h2>Our Products</h2>
+        <p>
+          The world’s most comfortable shoes for life’s everyday adventures.
+        </p>
+      </div>
+      <div class="product-filter-bar-wrapper">
+        <div class="product-filter-bar">
+          <div class="filter-controls">
+            <button class="filter-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-filter"
+              >
+                <polygon
+                  points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+                ></polygon>
+              </svg>
+              FILTER <span>(41 products)</span>
+            </button>
+          </div>
+
+          <div class="sort-controls">
+            <button class="sort-btn">
+              FEATURED
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-down"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="sort-dropdown">
+              <ul>
+                <li><a href="#">BEST SELLING</a></li>
+                <li><a href="#">PRICE, HIGH TO LOW</a></li>
+                <li><a href="#">PRICE, LOW TO HIGH</a></li>
+              </ul>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <main class="products-main">
-        <div class="container">
-            <aside class="sidebar">
-                <h2>Sản phẩm</h2>
-                <div class="categories">
-                    <h3>Danh mục</h3>
-                    <ul>
-                        <li><a href="#">Thời Trang Nam</a></li>
-                        <li><a href="#">Thời Trang Nữ</a></li>
-                        <li><a href="#">Giày</a></li>
-                        <li><a href="#">Phụ Kiện</a></li>
-                    </ul>
-                </div>
-                <div class="filter-price">
-                    <h3>Lọc theo</h3>
-                    <p>Giá</p>
-                    <div class="price-slider">
-                        <input type="range" min="200000" max="1500000" value="800000" class="slider">
-                        <div class="price-range-labels">
-                            <span>200.000₫</span>
-                            <span>1.500.000₫</span>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-
-            <section class="products-section">
-                <div class="product-grid">
-                    <div class="product-item">
-                        <img src="images/product1.jpg" alt="Áo sơ mi nam">
-                        <h3>Áo sơ mi nam</h3>
-                        <p class="price">499.000₫</p>
-                    </div>
-
-                    <div class="product-item">
-                        <img src="images/product2.jpg" alt="Áo khoác nữ">
-                        <h3>Áo khoác nữ</h3>
-                        <p class="price">1.099.000₫</p>
-                    </div>
-
-                    <div class="product-item">
-                        <img src="images/product3.jpg" alt="Túi xách">
-                        <h3>Túi xách</h3>
-                        <p class="price">499.000₫</p>
-                    </div>
-
-                    <div class="product-item">
-                        <img src="images/product4.jpg" alt="Giày thể thao">
-                        <h3>Giày thể thao</h3>
-                        <p class="price">750.000₫</p>
-                    </div>
-
-                    <div class="product-item">
-                        <img src="images/product5.jpg" alt="Quần tây nữ">
-                        <h3>Quần tây nữ</h3>
-                        <p class="price">650.000₫</p>
-                    </div>
-
-                    <div class="product-item">
-                        <img src="images/product6.jpg" alt="Váy công sở">
-                        <h3>Váy công sở</h3>
-                        <p class="price">850.000₫</p>
-                    </div>
-                    </div>
-            </section>
+      <div class="carousel-container">
+        <button class="prev-btn"></button>
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+            <li class="carousel-slide">
+              <img src="product-img/g1.jpg" alt="Pic1" />
+            </li>
+            <li class="carousel-slide">
+              <img src="product-img/g2.jpg" alt="Pic2" />
+            </li>
+            <li class="carousel-slide">
+              <img src="product-img/g3.jpg" alt="Pic3" />
+            </li>
+            <li class="carousel-slide">
+              <img src="product-img/g4.jpg" alt="Pic4" />
+            </li>
+            <li class="carousel-slide">
+              <img src="product-img/g5.jpg" alt="Pic5" />
+            </li>
+          </ul>
         </div>
+        <button class="next-btn"></button>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/men1.jpg"
+              alt="Product 1"
+              data-color="Dark Navy"
+            />
+            <img
+              class="product-image"
+              src="access/img/men1.1.jpg"
+              alt="Product 1"
+              data-color="Thunder Green"
+            />
+            <img
+              class="product-image"
+              src="access/img/men1.2.jpg"
+              alt="Product 1"
+              data-color="Natural White"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">MEN'S TREE RUNNER NZ</h3>
+            <p class="product-color-name">Dark Navy</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgba(19, 38, 90, 0.815)"
+                  data-color="Dark Navy"
+                  data-color-name="Dark Navy"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgba(29, 46, 33, 0.726)"
+                  data-color="Thunder Green"
+                  data-color-name="Thunder Green"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgb(222, 230, 222)"
+                  data-color="Natural White"
+                  data-color-name="Natural White"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;110</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+              <span class="size-box">12</span>
+              <span class="size-box">12.5</span>
+              <span class="size-box">13</span>
+              <span class="size-box">13.5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/men2.jpg"
+              alt="Product 1"
+              data-color="Natural Black"
+            />
+            <img
+              class="product-image"
+              src="product-img/men2.1.jpg"
+              alt="Product 1"
+              data-color="Natural White"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">MEN'S WOOL CRUISER SLIP ON</h3>
+            <p class="product-color-name">Natural Black</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgb(11, 11, 12)"
+                  data-color="Natural Black"
+                  data-color-name="Natural Black"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgba(239, 243, 240, 0.904)"
+                  data-color="Natural White"
+                  data-color-name="Natural White"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;95</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+              <span class="size-box">12</span>
+              <span class="size-box">12.5</span>
+              <span class="size-box">13</span>
+              <span class="size-box">13.5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/men3.jpg"
+              alt="Product 1"
+              data-color="Natural Grey"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">MEN'S WOOL RUNNER CHELSEA</h3>
+            <p class="product-color-name">Natural Grey</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgba(53, 54, 56, 0.815)"
+                  data-color="Natural Grey"
+                  data-color-name="Natural Grey"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;160</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+              <span class="size-box">12</span>
+              <span class="size-box">12.5</span>
+              <span class="size-box">13</span>
+              <span class="size-box">13.5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/men4.1.jpg"
+              alt="Product 1"
+              data-color="Blizzard"
+            />
+            <img
+              class="product-image"
+              src="product-img/men4.jpg"
+              alt="Product 1"
+              data-color="Rugged Beige"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">MEN'S STRIDER</h3>
+            <p class="product-color-name">Blizzard</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgba(227, 228, 230, 0.863)"
+                  data-color="Blizzard"
+                  data-color-name="Blizzard"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgb(197, 180, 158)"
+                  data-color="Rugged Beige"
+                  data-color-name="Rugged Beige"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;125</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+              <span class="size-box">12</span>
+              <span class="size-box">12.5</span>
+              <span class="size-box">13</span>
+              <span class="size-box">13.5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/wm1.jpg"
+              alt="Product 1"
+              data-color="Beige Blush"
+            />
+            <img
+              class="product-image"
+              src="product-img/wm1.1.jpg"
+              alt="Product 1"
+              data-color="Medium Grey"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">WOMEN'S TREE GLIDER</h3>
+            <p class="product-color-name">Beige Blush</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgba(216, 188, 167, 0.911)"
+                  data-color="Beige Blush"
+                  data-color-name="Beige Blush"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgb(107, 107, 104)"
+                  data-color="Medium Grey"
+                  data-color-name="Medium Grey"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;135</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">6</span>
+              <span class="size-box">6.5</span>
+              <span class="size-box">7</span>
+              <span class="size-box">7.5</span>
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/wm2.jpg"
+              alt="Product 1"
+              data-color="Weathered White"
+            />
+            <img
+              class="product-image"
+              src="product-img/wm2.1.jpg"
+              alt="Product 1"
+              data-color="Hazy Cocoa"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">WOMEN'S TRAIL RUNNER</h3>
+            <p class="product-color-name">Weathered White</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgb(230, 227, 217)"
+                  data-color="Weathered White"
+                  data-color-name="Weathered White"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgba(95, 61, 22, 0.842)"
+                  data-color="Hazy Cocoa"
+                  data-color-name="Hazy Cocoa"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;140</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">6</span>
+              <span class="size-box">6.5</span>
+              <span class="size-box">7</span>
+              <span class="size-box">7.5</span>
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/wm3.jpg"
+              alt="Product 1"
+              data-color="Natural Black"
+            />
+            <img
+              class="product-image"
+              src="product-img/wm3.1.jpg"
+              alt="Product 1"
+              data-color="Bark Brown"
+            />
+            <img
+              class="product-image"
+              src="product-img/wm3.2.jpg"
+              alt="Product 1"
+              data-color="Medium Grey"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">MEN'S TREE BREEZER BOW</h3>
+            <p class="product-color-name">Natural Black</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgba(18, 18, 19, 0.938)"
+                  data-color="Natural Black"
+                  data-color-name="Natural Black"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgba(83, 62, 22, 0.863)"
+                  data-color="Bark Brown"
+                  data-color-name="Bark Brown"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgb(113, 114, 112)"
+                  data-color="Medium Grey"
+                  data-color-name="Medium Grey"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;100</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">6</span>
+              <span class="size-box">6.5</span>
+              <span class="size-box">7</span>
+              <span class="size-box">7.5</span>
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-images">
+            <img
+              class="product-image active"
+              src="product-img/wm4.jpg"
+              alt="Product 1"
+              data-color="Stony Cream"
+            />
+            <img
+              class="product-image"
+              src="product-img/wm4.1.jpg"
+              alt="Product 1"
+              data-color="Rugged Beige"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">WOMEN'S LOUNGER LIFT</h3>
+            <p class="product-color-name">Stony Cream</p>
+            <div class="product-color-price-wrapper">
+              <div class="product-colors">
+                <span
+                  class="color-swatch active"
+                  style="background-color: rgba(231, 229, 217, 0.76)"
+                  data-color="Stony Cream"
+                  data-color-name="Stony Cream"
+                ></span>
+                <span
+                  class="color-swatch"
+                  style="background-color: rgba(197, 175, 166, 0.925)"
+                  data-color="Rugged Beige"
+                  data-color-name="Rugged Beige"
+                ></span>
+              </div>
+
+              <p class="product-price">&#36;110</p>
+            </div>
+            <div class="product-sizes">
+              <span class="size-box">6</span>
+              <span class="size-box">6.5</span>
+              <span class="size-box">7</span>
+              <span class="size-box">7.5</span>
+              <span class="size-box">8</span>
+              <span class="size-box">8.5</span>
+              <span class="size-box">9</span>
+              <span class="size-box">9.5</span>
+              <span class="size-box">10</span>
+              <span class="size-box">10.5</span>
+              <span class="size-box">11</span>
+              <span class="size-box">11.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-grid-container">
+        <div class="info-card">
+          <h3>WEAR ALL DAY COMFORT</h3>
+          <p>
+            Lightweight, bouncy, and wildly comfortable. Allbirds shoes make any
+            outing feel effortless. Slip in, lace up, or slide them on and enjoy
+            the comfy support.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>SUSTAINABILITY IN EVERY STEP</h3>
+          <p>
+            From materials to transport, we're working to reduce our carbon
+            footprint to near zero. Holding ourselves accountable and striving
+            for climate goals isn’t a 30-year goal—it’s now.
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>MATERIALS FROM THE EARTH</h3>
+          <p>
+            We replace petroleum-based synthetics with natural alternatives
+            wherever we can. Like using wool, tree fiber, and sugarcane. They're
+            soft, breathable, and better for the planet—win, win, win.
+          </p>
+        </div>
+      </div>
+
+      <div class="chat-button-container">
+        <button class="chat-button">Chat</button>
+      </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Fashion Store. All rights reserved.</p>
-        </div>
-    </footer>
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const slides = Array.from(track.children);
+      const nextBtn = document.querySelector(".next-btn");
+      const prevBtn = document.querySelector(".prev-btn");
 
-</body>
+      let currentIndex = 0;
+      const slidesPerPage = 3;
+
+      function updateSlidePosition() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      function updateButtons() {
+        prevBtn.style.display = currentIndex === 0 ? "none" : "flex";
+        const totalSlides = slides.length;
+        const lastScrollableIndex = totalSlides - slidesPerPage;
+        nextBtn.style.display =
+          currentIndex >= lastScrollableIndex ? "none" : "flex";
+      }
+
+      nextBtn.addEventListener("click", () => {
+        const totalSlides = slides.length;
+        const lastScrollableIndex = totalSlides - slidesPerPage;
+        if (currentIndex < lastScrollableIndex) {
+          currentIndex++;
+          updateSlidePosition();
+          updateButtons();
+        }
+      });
+
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlidePosition();
+          updateButtons();
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        updateSlidePosition();
+        updateButtons();
+      });
+
+      updateButtons();
+
+      const sortButton = document.querySelector(".sort-controls .sort-btn");
+      const sortDropdown = document.querySelector(".sort-dropdown");
+
+      sortButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        sortDropdown.style.display =
+          sortDropdown.style.display === "block" ? "none" : "block";
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          !sortButton.contains(event.target) &&
+          !sortDropdown.contains(event.target)
+        ) {
+          sortDropdown.style.display = "none";
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const productCards = document.querySelectorAll(".product-card");
+
+        productCards.forEach((card) => {
+          const colorSwatches = card.querySelectorAll(".color-swatch");
+          const productImages = card.querySelectorAll(".product-image");
+          const colorNameElement = card.querySelector(".product-color-name");
+
+          colorSwatches.forEach((swatch) => {
+            swatch.addEventListener("click", () => {
+              const selectedColor = swatch.getAttribute("data-color");
+
+              colorSwatches.forEach((s) => s.classList.remove("active"));
+              swatch.classList.add("active");
+
+              productImages.forEach((img) => {
+                img.classList.remove("active");
+                if (img.getAttribute("data-color") === selectedColor) {
+                  img.classList.add("active");
+                }
+              });
+
+              const newColorName = swatch.getAttribute("data-color-name");
+              if (newColorName) {
+                colorNameElement.textContent = newColorName;
+              }
+            });
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header");
+        let lastScrollY = window.scrollY;
+        let hideTimeout;
+
+        window.addEventListener("scroll", () => {
+          const currentScrollY = window.scrollY;
+
+          if (currentScrollY > lastScrollY) {
+            clearTimeout(hideTimeout);
+
+            hideTimeout = setTimeout(() => {
+              header.classList.add("hide");
+            }, 800);
+          } else if (currentScrollY < lastScrollY) {
+            header.classList.remove("hide");
+          }
+
+          lastScrollY = currentScrollY;
+        });
+      });
+    </script>
+  </body>
 </html>
