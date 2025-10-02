@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fashion Store</title>
+    <title>Fashion Store - Main menu</title>
 
-    <!-- Booststrap CDN -->
+    <!-- Booststrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="access/css/base.css" />
     <link rel="stylesheet" href="access/css/index.css" />
+
+    <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -29,15 +32,17 @@
     />
   </head>
   <body>
-    <!-- <header class="container-fluid">
-      <nav class="navbar__container">
+    <header class="Navbar">
+      <nav
+        class="navbar__container d-flex justify-content-between align-items-center"
+      >
         <a href="index.html" class="navbar__logo">Fashion Store</a>
 
         <div class="navbar__toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
 
-        <ul class="navbar__menu">
+        <ul class="navbar__menu d-flex">
           <li class="navbar__item">
             <a href="index.html" class="navbar__link">Trang Chủ</a>
           </li>
@@ -65,60 +70,14 @@
           </li>
         </ul>
       </nav>
-    </header> -->
-
-    <header>
-      <nav class="navbar navbar-expand-lg px-3 py-4 fixed-top">
-        <div class="container-fluid">
-          <a href="index.html" class="navbar-brand fs-3 fw-bold"
-            >Fashion Store</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse justify-content-lg-center justify-content-center text-center"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav gap-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Trang chủ</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">Giới thiệu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="product.html">Sản phẩm</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Liên hệ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Đăng nhập</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cart.html">🛒 Giỏ hàng</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
     </header>
     <main>
       <!-- banner -->
-      <section class="banner mt-5">
+      <section class="banner d-flex">
         <div>
           <img
             class="banner__img"
-            src="./access/img/model2.png"
+            src="./access/img/model1.png"
             alt="model img"
           />
         </div>
@@ -173,7 +132,7 @@
           ></a>
         </div>
       </div>
-      <div class="footer__content">
+      <div class="footer__content d-flex justify-content-between flex-wrap">
         <div class="footer__column footer__company">
           <h3 class="footter__title">Company name</h3>
           <p class="footer__text">
@@ -216,15 +175,13 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      const toggle = document.querySelector(".navbar__toggle");
+      const menu = document.querySelector(".navbar__menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
