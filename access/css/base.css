@@ -155,12 +155,12 @@ p {
 }
 
 .primary {
-  background-color: var(--color-primary-dark);
-  color: #ddd;
+  background-color: var(--color-accent);
+  color: #fff;
 }
 
 .primary:hover {
-  background-color: var(--color-accent);
+  color: var(--color-black);
 }
 
 .accent {

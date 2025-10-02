@@ -5,6 +5,9 @@
 /* -------------------------------
    Layout chung
 --------------------------------*/
+body {
+  font-family: "Playfair Display", sans-serif;
+}
 
 .cart-main {
   flex: 1;
@@ -170,13 +173,11 @@
   background-color: #c0392b;
 }
 
-
 /* ================================
    Accordion (Hệ thống cửa hàng)
 ================================*/
 .cart-store-accordion__toggle {
   display: none; /* ẩn checkbox */
-
 }
 
 .cart-store-accordion__label {
@@ -236,6 +237,6 @@
 .cart-store-accordion__social-links a:hover {
   color: #c0392b;
 }
-.cart-store-locations mb-4 h2{
+.cart-store-locations mb-4 h2 {
   color: var(--color-primary);
 }
