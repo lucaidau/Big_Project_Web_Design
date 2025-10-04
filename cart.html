@@ -108,64 +108,19 @@
           </thead>
           <tbody>
             <tr class="cart-item">
-              <td>Áo sơ mi nam</td>
+              <td class="product-name"></td>
               <td>
-                <img
-                  src="./access/img/ao-so-mi.jpg"
-                  alt="Áo sơ mi"
-                  class="cart-item__image"
-                />
+                <img src="" alt="Áo sơ mi" class="cart-item__image" />
               </td>
-              <td>499,000 đ</td>
+              <td class="product-price"></td>
               <td>
                 <button class="cart-item__qty-btn">-</button>
-                <span class="cart-item__qty">1</span>
+                <span class="cart-item__qty"></span>
                 <button class="cart-item__qty-btn">+</button>
               </td>
-              <td>499,000 đ</td>
+              <td class="product-price"></td>
               <td>
-                <button class="cart-item__remove">
-                  <!-- SVG icon thùng rác -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-trash-2"
-                  >
-                    <path d="M10 11v6" />
-                    <path d="M14 11v6" />
-                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
-                    <path d="M3 6h18" />
-                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                  </svg>
-                </button>
-              </td>
-            </tr>
-
-            <tr class="cart-item">
-              <td>Quần tây nam</td>
-              <td>
-                <img
-                  src="access/img/quan-tay.jpg"
-                  alt="Quần tây"
-                  class="cart-item__image"
-                />
-              </td>
-              <td>699,000 đ</td>
-              <td>
-                <button class="cart-item__qty-btn">-</button>
-                <span class="cart-item__qty">2</span>
-                <button class="cart-item__qty-btn">+</button>
-              </td>
-              <td>1,398,000 đ</td>
-              <td>
-                <button class="cart-item__remove">
+                <button type="button" class="cart-item__remove">
                   <!-- SVG icon thùng rác -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -195,9 +150,9 @@
       <!-- Tổng cộng -->
       <!-- .cart-summary            : hiển thị tạm tính, giảm giá, tổng thanh toán -->
       <div class="cart-summary mb-4 text-right">
-        <p>Tạm tính: <strong>1,897,000 đ</strong></p>
+        <p>Tạm tính: <strong class="total"></strong></p>
         <p>Giảm giá: <strong>0 đ</strong></p>
-        <p><b>Tổng thanh toán: 1,897,000 đ</b></p>
+        <p>Tổng thanh toán: <strong class="total"></strong></p>
       </div>
 
       <!-- Nút hành động -->
@@ -216,6 +171,7 @@
         <a
           href="javascript:void(0)"
           class="cart-actions__btn cart-actions__btn--primary"
+          id="payment"
           onclick="window.location.reload();"
         >
           Thanh toán
@@ -348,6 +304,8 @@
         </p>
       </div>
     </footer>
+    <script src="access/script/active-sidebar.js"></script>
+    <script src="access/script/cart.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
