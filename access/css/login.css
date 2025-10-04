@@ -1,0 +1,104 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fffaf6;
+  color: #333;
+}
+
+header {
+  font-family: "Playfair Display", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+.form-group {
+  margin-bottom: 25px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+  width: 90%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+  margin: 10px 0;
+}
+input:focus {
+  border: 1px solid #b0855d;
+  outline: none;
+  box-shadow: 0 0 6px rgba(176, 133, 93, 0.3);
+}
+label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -10px;
+  color: #555;
+}
+
+.btn,
+.btn-register {
+  width: 100%;
+  padding: 14px;
+  background: #b0855d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn:hover,
+.btn-register:hover {
+  background: #946947;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.note {
+  margin-top: 18px;
+  font-size: 14px;
+}
+.note a {
+  color: #b0855d;
+  font-weight: 500;
+  text-decoration: none;
+}
+.note a:hover {
+  text-decoration: underline;
+}
+
+.box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  width: 400px;
+  margin: 30px;
+}
+
+.form-none {
+  display: none;
+}
+.form-active {
+  display: block;
+}
