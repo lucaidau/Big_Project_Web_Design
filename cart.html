@@ -22,21 +22,17 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome CDN -->
+ <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
   </head>
 
   <body>
     <!-- ==========================
          HEADER
-         .cart-header             : toàn bộ header giỏ hàng
-         .cart-header__row        : chứa logo và menu
-         .cart-header__logo       : logo
-         .cart-header__nav        : menu điều hướng
     =========================== -->
     <header class="Navbar">
       <nav
@@ -79,21 +75,12 @@
     </header>
     <!-- ==========================
          MAIN CONTENT
-         .cart-main                : container chính của trang giỏ hàng
     =========================== -->
     <main class="cart-main container mt-4 mb-4">
-      <!-- Tiêu đề -->
-      <!-- .cart-title              : tiêu đề chính "Giỏ hàng" -->
+
       <h1 class="cart-title mb-3">Giỏ hàng</h1>
 
-      <!-- Bảng giỏ hàng -->
-      <!-- .cart-table-wrapper      : khung chứa bảng, có scroll ngang nếu cần -->
-      <!-- .cart-table              : bảng hiển thị sản phẩm -->
-      <!-- .cart-item               : mỗi hàng sản phẩm -->
-      <!-- .cart-item__image        : ảnh sản phẩm -->
-      <!-- .cart-item__qty-btn      : nút +/- số lượng -->
-      <!-- .cart-item__qty          : hiển thị số lượng -->
-      <!-- .cart-item__remove       : nút xóa sản phẩm -->
+
       <div class="cart-table-wrapper">
         <table class="cart-table mb-4">
           <thead>
@@ -121,7 +108,7 @@
               <td class="product-price"></td>
               <td>
                 <button type="button" class="cart-item__remove">
-                  <!-- SVG icon thùng rác -->
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -147,19 +134,14 @@
         </table>
       </div>
 
-      <!-- Tổng cộng -->
-      <!-- .cart-summary            : hiển thị tạm tính, giảm giá, tổng thanh toán -->
+
       <div class="cart-summary mb-4 text-right">
         <p>Tạm tính: <strong class="total"></strong></p>
         <p>Giảm giá: <strong>0 đ</strong></p>
         <p>Tổng thanh toán: <strong class="total"></strong></p>
       </div>
 
-      <!-- Nút hành động -->
-      <!-- .cart-actions            : container các nút hành động -->
-      <!-- .cart-actions__btn        : nút chung -->
-      <!-- .cart-actions__btn--primary : nút thanh toán -->
-      <!-- .cart-actions__btn--accent  : nút tiếp tục mua sắm -->
+
 
       <div class="cart-actions text-center mb-4">
         <a
@@ -178,11 +160,7 @@
         </a>
       </div>
 
-      <!-- Khuyến mãi -->
-      <!-- .cart-discount           : container nhập mã giảm giá -->
-      <!-- .cart-discount__input     : input nhập mã -->
-      <!-- .cart-discount__btn       : nút áp dụng -->
-      <!-- .cart-discount__btn--accent : nút áp dụng màu accent -->
+
       <div class="cart-discount mb-4">
         <label for="discount">Khuyến mãi / Mã giảm giá</label><br />
         <input
@@ -200,15 +178,9 @@
         </button>
       </div>
     </main>
-    <!-- HỆ THỐNG CỬA HÀNG (Accordion) -->
-    <!-- .cart-store-locations          : section chứa danh sách cửa hàng -->
-    <!-- .cart-store-accordion__item     : mỗi cửa hàng 1 item -->
-    <!-- .cart-store-accordion__toggle   : checkbox ẩn điều khiển mở/đóng -->
-    <!-- .cart-store-accordion__label    : nhãn cửa hàng có mũi tên -->
-    <!-- .cart-store-accordion__content  : nội dung chi tiết cửa hàng -->
-    <!-- .cart-store-accordion__social-links : danh sách social links -->
+
     <!-- FOOTER -->
-    <!-- .cart-footer              : footer của trang giỏ hàng -->
+
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__social">
@@ -229,40 +201,41 @@
       </div>
       <div class="footer__content">
         <section class="cart-store-locations mb-4">
-          <h3 class="footter__title">Hệ thống cửa hàng Fashion Stroe</h3>
+          <section class="footer__stores text-center my-4">
+  <h3 class="footer__title mb-3">Hệ thống cửa hàng Fashion Store</h3>
 
-          <!-- Store 1 -->
-          <div class="cart-store-accordion__item">
-            <input
-              type="checkbox"
-              id="store1"
-              class="cart-store-accordion__toggle"
-            />
-            <label for="store1" class="cart-store-accordion__label">
-              Store 1: 26 Lý Tự Trọng, HCM ▼
-            </label>
-            <div class="cart-store-accordion__content">
-              <p>Email: store1@fashionstore.com</p>
-              <p>Hotline: 1900 1234</p>
-            </div>
-          </div>
+  <div class="dropdown mb-2">
+    <button
+      class="btn btn-light dropdown-toggle px-4 py-2"
+      type="button"
+      id="store1Dropdown"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Store 1: 26 Lý Tự Trọng, HCM ▼
+    </button>
+    <ul class="dropdown-menu text-center " aria-labelledby="store1Dropdown">
+      <li><p class="dropdown-item-text mb-0">Email: store1@fashionstore.com</p></li>
+      <li><p class="dropdown-item-text mb-0">Hotline: 1900 1234</p></li>
+    </ul>
+  </div>
 
-          <!-- Store 2 -->
-          <div class="cart-store-accordion__item">
-            <input
-              type="checkbox"
-              id="store2"
-              class="cart-store-accordion__toggle"
-            />
-            <label for="store2" class="cart-store-accordion__label">
-              Store 2: 140 Nguyễn Hy Quang, Hà Nội ▼
-            </label>
-            <div class="cart-store-accordion__content">
-              <p>Email: store2@fashionstore.com</p>
-              <p>Hotline: 1900 5678</p>
-            </div>
-          </div>
-        </section>
+  <div class="dropdown">
+    <button
+      class="btn btn-light dropdown-toggle px-4 py-2"
+      type="button"
+      id="store2Dropdown"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Store 2: 140 Nguyễn Hy Quang, Hà Nội ▼
+    </button>
+    <ul class="dropdown-menu text-center" aria-labelledby="store2Dropdown">
+      <li><p class="dropdown-item-text mb-0">Email: store2@fashionstore.com</p></li>
+      <li><p class="dropdown-item-text mb-0">Hotline: 1900 5678</p></li>
+    </ul>
+  </div>
+</section>
         <div class="footer__column footer__company">
           <h3 class="footter__title">Company name</h3>
           <p class="footer__text">
