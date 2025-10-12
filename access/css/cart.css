@@ -6,7 +6,7 @@
    Layout chung
 --------------------------------*/
 body {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", sans-serif !important;
 }
 
 .cart-main {
@@ -239,4 +239,26 @@ body {
 }
 .cart-store-locations mb-4 h2 {
   color: var(--color-primary);
+}
+/* ================================
+            Footer
+================================*/
+.btn-light {
+  background-color: #e9d0bc;
+  border: none;
+  color: #333;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+  background-color: #d8bfa7;
+  color: #000;
+}
+
+.dropdown-menu {
+  background-color: #faf7f4;
+  border: 1px solid #ddd;
 }
